@@ -1,0 +1,19 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+#podcast {
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .text {
+        color: $yellow;
+        font-family: $title-font;
+        font-size: $s;    
+        font-weight: bolder;
+        margin: auto;
+        text-transform: uppercase;
+        text-shadow: rgba(3, 3, 3, 0.719) 0 0 5px;
+    }
+}

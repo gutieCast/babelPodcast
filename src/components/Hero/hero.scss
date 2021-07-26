@@ -1,0 +1,60 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+#hero {
+    align-items: center;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    .img-hero {
+        text-align: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: content-box;
+        display: block;
+        position: relative;
+        height: 700px;
+        width: 100%;
+        @include breakpoint-4 {
+            // background-attachment: fixed;
+            background-size: cover;
+            height: 1066px;
+        }
+        .name-container {
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            @include breakpoint-4 {
+                // padding-top: 130px;
+            }
+            #text-hero {
+                color: $yellow;
+                font-family: $title-font;
+                font-size: $l;    
+                font-weight: bolder;
+                margin: auto;
+                text-transform: uppercase;
+                text-shadow: rgba(3, 3, 3, 0.719) 0 0 5px;
+                @include breakpoint-3 {
+                    font-size: $xl;
+                }
+            }
+        }
+    }
+    .text-container {
+        padding: 30px;
+        display: flex;
+        color: $yellow;
+        font-size: $title;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 700px;
+    }
+}

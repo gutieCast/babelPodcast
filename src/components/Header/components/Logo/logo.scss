@@ -1,0 +1,9 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.logo-container {
+    height: 80%;
+    #logoBabel {
+        max-height: 100%;
+    }
+}
