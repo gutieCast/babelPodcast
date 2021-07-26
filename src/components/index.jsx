@@ -1,6 +1,5 @@
 export { Header } from 'components/Header'
 export { Home } from 'components/Home'
 export { Main } from 'components/Main'
-export { Hero } from 'components/Hero'
 export { Podcast } from 'components/Podcast'
 export { Contact } from 'components/Contact'
