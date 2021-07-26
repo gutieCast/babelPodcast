@@ -7,13 +7,13 @@ import { Contact } from 'components/Contact'
 
 const Main = () => {
     return (
-        <div>
+        <main>
             <Switch>
                 <Route path="/contacto" component={Contact} />
                 <Route path="/podcast" component={Podcast} />
                 <Route excat path="/" component={Home} />
             </Switch>
-        </div>
+        </main>
     )
 }
 
