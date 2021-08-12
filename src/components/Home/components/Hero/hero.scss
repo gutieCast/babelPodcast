@@ -9,31 +9,43 @@
     position: relative;
     width: 100%;
     margin-top: 85px;
-    .img-hero {
-        text-align: center;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-sizing: content-box;
-        display: block;
-        margin: 30px 0;
-        position: relative;
-        width: 100%;
-        @include breakpoint-4 {
-            // background-attachment: fixed;
-            background-size: cover;
-            height: 1066px;
+    height: auto;
+        a {
+            width: 100%;
+            #img-hero {
+                align-items: center;
+                background-attachment: fixed;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-size: auto;
+                box-sizing: content-box;
+                display: flex;
+                flex-direction: column;
+                height: 711px;
+                justify-content: space-between;
+                width: 100%;
+                @include breakpoint-3 {
+                    background-position: center;
+                }
+                @include breakpoint-4 {
+                    background-attachment: fixed;
+                    background-size: contain;
+                }
+            }
         }
-    }
     .text-container {
         padding: 30px;
         display: flex;
         color: $yellow;
         font-size: $title;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         text-align: center;
-        height: 700px;
+        height: 711px;
+        z-index: -1;
+        scroll-behavior: smooth;
+        @include breakpoint-4 {
+            height: 721px;
+        }
     }
 }
