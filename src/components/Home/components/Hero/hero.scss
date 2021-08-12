@@ -41,9 +41,8 @@
         align-items: flex-start;
         justify-content: center;
         text-align: center;
-        height: 711px;
-        z-index: -1;
-        scroll-behavior: smooth;
+        height: 630px;
+        margin-top: 50px;
         @include breakpoint-4 {
             height: 721px;
         }
