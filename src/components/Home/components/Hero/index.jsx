@@ -1,17 +1,12 @@
 import React from 'react'
+import HeroImg from 'assets/images/portada.png'
 import 'components/Home/components/Hero/hero.scss'
 
 const Hero = () => {
     return (
         <div id="hero" >
             <div className="img-hero">
-                <div className="name-container">
-                    <h1 className="uk-text-center uk-margin-auto uk-margin-auto-vertical"
-                        uk-parallax="target: #hero; opacity: 1, 0; y: 400; easing: -2"
-                        id="text-hero">
-                        Babel Podcast
-                    </h1>
-                </div>
+                <img src={HeroImg} alt="convocatoria" />
             </div>
             <div className="text-container">
                 <p>

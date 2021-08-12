@@ -8,6 +8,7 @@
     flex-direction: column;
     position: relative;
     width: 100%;
+    margin-top: 85px;
     .img-hero {
         text-align: center;
         background-attachment: fixed;
@@ -16,35 +17,13 @@
         background-size: cover;
         box-sizing: content-box;
         display: block;
+        margin: 30px 0;
         position: relative;
-        height: 700px;
         width: 100%;
         @include breakpoint-4 {
             // background-attachment: fixed;
             background-size: cover;
             height: 1066px;
-        }
-        .name-container {
-            position: absolute;
-            top: 30%;
-            width: 100%;
-            text-align: center;
-            margin: auto;
-            @include breakpoint-4 {
-                // padding-top: 130px;
-            }
-            #text-hero {
-                color: $yellow;
-                font-family: $title-font;
-                font-size: $l;    
-                font-weight: bolder;
-                margin: auto;
-                text-transform: uppercase;
-                text-shadow: rgba(3, 3, 3, 0.719) 0 0 5px;
-                @include breakpoint-3 {
-                    font-size: $xl;
-                }
-            }
         }
     }
     .text-container {
