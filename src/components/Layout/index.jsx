@@ -2,7 +2,7 @@ import React from 'react'
 import Pattern from 'assets/images/Patterns/patron1.png'
 import 'components/Layout/layout.scss'
 
-const Layout = ({ title, children, pattern }) => {
+const Layout = ({ title, body, children, pattern }) => {
     return (
         <>
             {
@@ -13,6 +13,9 @@ const Layout = ({ title, children, pattern }) => {
                         <h2 className="title-section">
                             {title}
                         </h2>
+                        <div className="content-section">
+                            {body}
+                        </div>
                         {children}
                     </div>
                 </div>

@@ -11,6 +11,7 @@ const Main = () => {
     return (
         <main className="main">
             <Switch>
+                <Route path="/acerca-de" component={Inscription} />
                 <Route path="/inscribirme" component={Inscription} />
                 <Route path="/contacto" component={Contact} />
                 <Route path="/podcasts" component={Podcasts} />
