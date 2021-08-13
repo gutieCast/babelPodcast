@@ -13,7 +13,11 @@ const Hero = () => {
             <div className="text-container">
                 <p className="uk-text-center uk-margin-auto uk-margin-auto-vertical"
                     uk-parallax="target: #hero; opacity: 0, 1; y: 100; easing: 2">
-                    ¡Bienvenidx a Babel! Un lugar donde coexisten distintas formas de contar y decir.
+                    ¡Bienvenidx a Babel!
+                    <br />
+                    Un lugar donde coexisten
+                    <br />
+                    distintas formas de contar y decir.
                 </p>
             </div>
         </div>

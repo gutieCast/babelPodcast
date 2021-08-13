@@ -1,19 +1,21 @@
 @import 'styles/mixins.scss';
 @import 'styles/variables.scss';
 
-#podcast {
-    align-items: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+#podcasts {
+    height: inherit;
     width: 100%;
     .text {
+        position: relative;
+        background-color: $black;
         color: $yellow;
-        font-family: $title-font;
+        padding: 10px;
+        font-family: $main-font;
         font-size: $s;    
         font-weight: bolder;
-        margin: auto;
         text-transform: uppercase;
         text-shadow: rgba(3, 3, 3, 0.719) 0 0 5px;
+        @include breakpoint-4 {
+            padding: 100px;
+        }
     }
 }

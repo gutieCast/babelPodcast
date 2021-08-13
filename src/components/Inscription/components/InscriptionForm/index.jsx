@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Redirect, useParams } from 'react-router-dom'
-import { ContentBox } from 'components'
+import { Redirect } from 'react-router-dom'
 import { Button } from 'components/Button'
 import { validations } from 'helpers/validations'
 import PhoneInput from 'react-phone-number-input'
@@ -11,7 +10,7 @@ const InscriptionForm = () => {
 
     /////////////////////////////////////////////////////VALIDATIONS
 
-    const { errors, validateName, validateLastname, validateEmail, validatePhone, validateProfession, validateOrganization, validatePaymentModality } = validations
+    const { errors, validateName, validateLastname, validateEmail, validatePhone, validateOrganization } = validations
 
 
     // const selectFromButton = setPaymentModality(sessionStorage.getItem('option'))
@@ -24,18 +23,19 @@ const InscriptionForm = () => {
     const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('')
-    const [profession, setProfession] = useState('');
-    const [organization, setOrganization] = useState('');
-    const [paymentModality, setPaymentModality] = useState(sessionStorage.getItem('option'))
+    const [organization, setOrganization] = useState('Esgoje una opción');
     const [isDisabled, setIsDisabled] = useState(true)
     const [goPay, setGoPay] = useState(false);
 
     // const { optionSelected } = useParams();
 
     const options = [
-        { value: 'sistema-modular', title: '1 módulo (Bs. 500)' },
-        { value: 'sistema-tetramodular', title: '4 módulos (Bs. 1600)' },
-        { value: 'diplomado-completo', title: '12 módulos (Bs. 3500)' }
+        { value: '', title: '--Escoge tu organización--' },
+        { value: 'Comunidad campesina', title: 'Comunidad campesina' },
+        { value: 'Comunidad indígena', title: 'Comunidad indígena' },
+        { value: 'Organización feminista', title: 'Organización feminista' },
+        { value: 'Organización barrial', title: 'Organización barrial' },
+        { value: 'Comunidad LGBTIQ+', title: 'Comunidad LGBTIQ+' },
     ];
 
     const handleSubmit = (e) => {
@@ -48,14 +48,12 @@ const InscriptionForm = () => {
         //     //     data: registrer,
         //     // });
         // };
-        console.log('registred: ', name, lastname, email, phone, profession, organization, paymentModality);
+        console.log('registred: ', name, lastname, email, phone, organization);
         setName('');
         setLastname('');
         setEmail('');
         setPhone('');
-        setProfession('');
         setOrganization('');
-        setPaymentModality('');
         firstRender.current = true
         setGoPay(true)
     }
@@ -67,11 +65,11 @@ const InscriptionForm = () => {
             return
         }
         setIsDisabled(pendingErrors(errors))
-    }, [name, lastname, email, phone, profession, organization, paymentModality]);
+    }, [name, lastname, email, phone, organization]);
 
     const pendingErrors = (errors) => {
         if (
-            (name === '' || lastname === '' || email === '' || phone === '' || profession === '' || organization === '' || paymentModality === '')
+            (name === '' || lastname === '' || email === '' || phone === '' || organization === '')
         ) {
             return true
         } else {
@@ -88,71 +86,53 @@ const InscriptionForm = () => {
 
     return (
         <>
-            {goPay && (<Redirect to="/modo-de-pago" />)}
-            <section id="registrer-form" className="inscription">
-                <ContentBox
-                    theme={'dark'}
-                    title={'registro'}
-                    hideDiv={true}
-                    flowContent={'center'}
-                >
-                    <label className="label-section">
-                        Paso 1 de 2
-                    </label>
-                    <form className="form-registrer" onSubmit={handleSubmit}>
-                        <fieldset className="uk-fieldset fieldset" >
-                            <div className="uk-margin">
-                                <input className="uk-input" name="name" id="name" type="text" placeholder="*Nombre" value={name} onChange={(e) => setName(e.target.value)} onBlur={(e) => validateName(e.target.value)} />
-                                {errors.name !== '' ? <span>{errors.name}</span> : ''}
-                            </div>
+            {goPay && (<Redirect to="/" />)}
+            <div id="registrer-form" className="inscription">
+                <form className="form-registrer" onSubmit={handleSubmit}>
 
-                            <div className="uk-margin">
-                                <input className="uk-input" name="lastname" id="lastname" type="text" placeholder="*Apellido" value={lastname} onChange={(e) => setLastname(e.target.value)} onBlur={(e) => validateLastname(e.target.value)} />
-                                {errors.lastname !== '' ? <span>{errors.lastname}</span> : ''}
-                            </div>
+                    <fieldset className="uk-fieldset fieldset" >
 
-                            <div className="uk-margin">
-                                <input className="uk-input" name="email" id="email" type="email" placeholder="*Correo Electrónico" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={(e) => validateEmail(e.target.value)} />
-                                {errors.email !== '' ? <span>{errors.email}</span> : ''}
-                            </div>
+                        <div className="uk-margin  input-box">
+                            <input className="uk-input input" name="name" id="name" type="text" placeholder="*Tus nombres" value={name} onChange={(e) => setName(e.target.value)} onBlur={(e) => validateName(e.target.value)} />
+                            {errors.name !== '' ? <span>{errors.name}</span> : ''}
+                        </div>
 
-                            <div className="uk-margin">
-                                <PhoneInput withCountryCallingCode={false} defaultCountry="BO" international={true} className="uk-input input-phone" placeholder="Número celular" name="phone" id="phone" type="text" value={phone} onChange={setPhone} onBlur={() => validatePhone(phone)} />
-                                {errors.phone !== '' ? <span>{errors.phone}</span> : ''}
-                            </div>
+                        <div className="uk-margin  input-box">
+                            <input className="uk-input input" name="lastname" id="lastname" type="text" placeholder="*Tus apellidos" value={lastname} onChange={(e) => setLastname(e.target.value)} onBlur={(e) => validateLastname(e.target.value)} />
+                            {errors.lastname !== '' ? <span>{errors.lastname}</span> : ''}
+                        </div>
 
-                            <div className="uk-margin">
-                                <input className="uk-input" name="profession" id="profession" type="text" placeholder="*Profesión" value={profession} onChange={(e) => setProfession(e.target.value)} onBlur={(e) => validateProfession(e.target.value)} />
-                                {errors.profession !== '' ? <span>{errors.profession}</span> : ''}
-                            </div>
+                        <div className="uk-margin input-box">
+                            <input className="uk-input input" name="email" id="email" type="email" placeholder="*Tu correo electrónico" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={(e) => validateEmail(e.target.value)} />
+                            {errors.email !== '' ? <span>{errors.email}</span> : ''}
+                        </div>
 
-                            <div className="uk-margin">
-                                <input className="uk-input" name="organization" id="organization" type="text" placeholder="*Empresa" value={organization} onChange={(e) => setOrganization(e.target.value)} onBlur={(e) => validateOrganization(e.target.value)} />
-                                {errors.organization !== '' ? <span>{errors.organization}</span> : ''}
-                            </div>
+                        <div className="uk-margin input-box">
+                            <PhoneInput withCountryCallingCode={false} defaultCountry="BO" international={true} className="uk-input input input-phone" placeholder="*Tu número de celular" name="phone" id="phone" type="text" value={phone} onChange={setPhone} onBlur={() => validatePhone(phone)} />
+                            {errors.phone !== '' ? <span>{errors.phone}</span> : ''}
+                        </div>
 
-                            <div className="uk-margin">
-                                <select className="payment-modality" name="payment-modality" id="payment-modality" value={paymentModality} onChange={(e) => setPaymentModality(e.target.value)} onBlur={(e) => validatePaymentModality(e.target.value)}
-                                >
-                                    {
-                                        options.map(option => {
-                                            console.log('print key ' + paymentModality);
-                                            return (
-                                                <option selected={paymentModality === option.value ? 'true' : ''}>
-                                                    {option.title}
-                                                </option>
-                                            )
-                                        })}
-                                </select>
-                                {errors.paymentModality !== '' ? <span>{errors.paymentModality}</span> : ''}
-                            </div>
-                        </fieldset>
-                        <Button text={'enviar'} disabled={isDisabled ? 'disabled' : ''} onClick={(e) => handleSubmit(e)} />
-                    </form >
-                </ContentBox>
-            </section>
+                        <div className="uk-margin input-box">
+                            <select className="organization" name="organization" id="organization" value={organization} onChange={(e) => setOrganization(e.target.value)} onBlur={(e) => validateOrganization(e.target.value)}
+                            >
+                                {
+                                    options.map(option => {
+                                        console.log('print key ' + organization);
+                                        return (
+                                            <option>
+                                                {option.title}
+                                            </option>
+                                        )
+                                    })}
+                            </select>
+                            {errors.organization !== '' ? <span>{errors.organization}</span> : ''}
+                        </div>
+                    </fieldset>
+                    <Button text={'enviar'} disabled={isDisabled ? 'disabled' : ''} onClick={(e) => handleSubmit(e)} />
+                </form >
+            </div>
         </>
     )
 }
 
-export { InscriptionForm }
+export default InscriptionForm

@@ -18,8 +18,8 @@ const MainMenu = ({ styleName }) => {
                 </NavLink>
             </li>
             <li className="menu-item" onClick={(e) => handleClick(e)}>
-                <NavLink className={`${styleName} uk-animation-slide-top-small menu-link`} to="/podcast">
-                    Podcast
+                <NavLink className={`${styleName} uk-animation-slide-top-small menu-link`} to="/podcasts">
+                    Pódcasts
                 </NavLink>
             </li>
             <li className="menu-item" onClick={(e) => handleClick(e)}>

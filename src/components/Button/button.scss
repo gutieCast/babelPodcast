@@ -1,0 +1,80 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.link-button {
+    align-items: center;
+    background-color: $yellow;
+    border: solid 1px $yellow;
+    border-radius: 5px;
+    color: $black;
+    font-family: $title-font;
+    font-size: $button;
+    font-weight: 700;
+    letter-spacing: 1.4;
+    text-transform: uppercase;
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    min-width: 200px;
+    max-width: max-content;
+    cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        color: $yellow;
+        border: solid 1px $yellow;
+        cursor: pointer;
+        transition: all ease-in-out .5s;
+    }
+}
+
+.btn {
+    background-color: $yellow;
+    border: solid 1px $yellow;
+    border-radius: 5px;
+    color: $black;
+    font-family: $title-font;
+    font-size: $button;
+    font-weight: 700;
+    letter-spacing: 1.4;
+    margin: auto;
+    max-width: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+        &:hover:enabled {
+            background-color: transparent;
+            color: $yellow;
+            border: solid 1px $yellow;
+            cursor: pointer;
+            transition: all ease-in-out .5s;
+        }
+        &:disabled  {
+            background-color: transparent;
+            border: solid 1px gray;
+            color: gray;
+            cursor: wait;
+            transition: all ease-in-out .5s;
+        }
+        &.PDF-downloader {
+            position: absolute;
+            bottom: 140px;
+            right: 90px;
+            @include breakpoint-3 {
+                bottom: 170px;
+            }
+    }
+}

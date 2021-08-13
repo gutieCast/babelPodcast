@@ -2,49 +2,49 @@
 @import 'styles/variables.scss';
 
 #hero {
-    align-items: center;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    // height: auto;
+    display: block;
     width: 100%;
     margin-top: 85px;
-    height: auto;
         a {
             width: 100%;
             #img-hero {
-                align-items: center;
                 background-attachment: fixed;
-                background-position: bottom;
+                background-position-y: 120px;
+                background-position-x: center;
                 background-repeat: no-repeat;
                 background-size: auto;
                 box-sizing: content-box;
                 display: flex;
                 flex-direction: column;
-                height: 630px;
-                justify-content: space-between;
+                height: 500px;
                 width: 100%;
                 @include breakpoint-3 {
-                    background-position: center;
+                    height: 630px;
                 }
                 @include breakpoint-4 {
+                    height: 780px;
+                    background-position: center;
                     background-attachment: fixed;
                     background-size: contain;
                 }
             }
         }
     .text-container {
+        align-items: center;
         padding: 30px;
         display: flex;
         color: $yellow;
-        font-size: $title;
-        align-items: flex-start;
+        font-family: $title-font;
+        font-size: $title-m;
         justify-content: center;
         text-align: center;
         height: 630px;
         margin-top: 50px;
-        @include breakpoint-4 {
-            height: 721px;
+        @include breakpoint-3 {
+            font-size: $title-l;
+            padding: 100px;
+            height: 810px;
         }
     }
 }
