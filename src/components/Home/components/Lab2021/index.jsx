@@ -15,7 +15,24 @@ const Lab2021 = () => {
         } else {
             // Render a countdown
             return (
-                <span className="countdown-timer">{days}:{hours}:{minutes}:{seconds}</span>
+                <div className="grid-timer">
+                    <div className="unit-time">
+                        <span className="countdown-timer">{days}</span>
+                        <span className="tag-time"> días</span>
+                    </div>
+                    <div className="unit-time">
+                        <span className="countdown-timer">{hours}</span>
+                        <span className="tag-time"> horas</span>
+                    </div>
+                    <div className="unit-time">
+                        <span className="countdown-timer">{minutes}</span>
+                        <span className="tag-time"> minutos</span>
+                    </div>
+                    <div className="unit-time">
+                        <span className="countdown-timer">{seconds}</span>
+                        <span className="tag-time"> segundos</span>
+                    </div>
+                </div>
             )
         }
     };
@@ -33,6 +50,8 @@ const Lab2021 = () => {
                 <Countdown
                     date="2021-08-31T19:00:00"
                     renderer={renderer}
+                    zeroPadDays={1}
+                    zeroPadTime={1}
                 />
 
                 <div className="teachers-info">

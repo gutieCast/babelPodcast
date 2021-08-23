@@ -8,21 +8,38 @@
             z-index: 4;
             display: flex;
             flex-direction: column;
-            .countdown-timer {
-                color: $yellow;
-                font-family: $title-font;
-                text-align: center;
-                padding: 50px 0;
-                width: inherit;
-                @include breakpoint-1 {
-                    font-size: $title-l;
-                    font-weight: bolder;
-                }
+            .grid-timer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 @include breakpoint-3 {
-                    font-size: $xl;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
                 }
-                @include breakpoint-4 {
-                    font-size: $xxl;
+                .unit-time {
+                    .countdown-timer {
+                        color: $yellow;
+                        font-family: $title-font;
+                        text-align: center;
+                        padding: 50px 0;
+                        width: inherit;
+                        @include breakpoint-1 {
+                            font-size: $title-l;
+                            font-weight: bolder;
+                        }
+                        @include breakpoint-3 {
+                            font-size: $xl;
+                        }
+                        @include breakpoint-4 {
+                            font-size: $xxl;
+                        }
+                    }
+                    .tag-time {
+                        color: $white;
+                        font-family: $main-font;
+                        font-weight: bolder;
+                    }
+
                 }
             }
         }
