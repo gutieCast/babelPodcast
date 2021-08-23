@@ -2,20 +2,18 @@
 @import 'styles/variables.scss';
 
 #podcasts {
-    height: inherit;
-    width: 100%;
     .text {
         position: relative;
         background-color: $black;
-        color: $yellow;
+        color: $white;
         padding: 10px;
         font-family: $main-font;
-        font-size: $s;    
+        font-size: $xs;    
         font-weight: bolder;
         text-transform: uppercase;
         text-shadow: rgba(3, 3, 3, 0.719) 0 0 5px;
         @include breakpoint-4 {
-            padding: 100px;
+            padding: 150px;
         }
     }
 }

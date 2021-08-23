@@ -9,11 +9,11 @@ html, body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-flow: column;
   height: 100%;
   overflow-x: hidden;
   #root {
+    display: flex;
+    flex-flow: column;
     position: relative;
     box-sizing: content-box;
     width: 100vw;

@@ -15,8 +15,8 @@ const Layout = ({ title, body, children, pattern }) => {
                         </h2>
                         <div className="content-section">
                             {body}
+                            {children}
                         </div>
-                        {children}
                     </div>
                 </div>
             }

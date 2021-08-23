@@ -7,6 +7,7 @@
     justify-content: flex-start;
     flex-direction: column;
     padding: 50px;
+    padding-top: 100px;
     width: 100%;
     height: inherit;
     position: relative;
@@ -38,14 +39,15 @@
             padding: 100px;
         }
         .title-section {
+            color: $white;
             position: relative;
             z-index: 4;
-            padding: 100px;
+            padding: 10px;
             display: block;
             background-color: $black;
+            text-align: center;
             text-transform: uppercase;
             font-family: $title-font;
-            font-size: $title-s;
             font-weight: 700;
             letter-spacing: 4px;
             line-height: 1.2;
@@ -66,11 +68,19 @@
             z-index: 4;
             padding-bottom: 30px;
             display: block;
-            a {
+            width: inherit;
+            height: inherit;
+            // a {
+            //     color: $white;
+            //     &:hover {
+            //         color: gray;
+            //     }
+            // }
+            .text {
                 color: $white;
-                &:hover {
-                    color: gray;
-                }
+                font-family: $main-font;
+                font-size: $title-s;
+                text-align: center;
             }
         }
     }

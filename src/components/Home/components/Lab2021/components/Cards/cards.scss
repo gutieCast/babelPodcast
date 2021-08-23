@@ -1,0 +1,44 @@
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+.slider {
+    background-color: $black;
+    // filter: none;
+    position: relative;
+    z-index: 5;
+    .teachers-container {
+        .teachers-list {
+            @include breakpoint-3 {
+                grid-gap: 20px;
+            }
+            // height: inherit;
+            display: flex;
+            flex-direction: row;
+            // width: min-content;
+            .teacher-item {
+                margin: 10px;
+                padding: 0;
+                @include breakpoint-3 {
+                    width: 237px;
+                }
+                @include breakpoint-4 {
+                    width: 350px;
+                }
+                .teacher-card {
+                    // display: flex;
+                    // position: relative;
+                    // height: max-content;
+                    // flex-wrap: row wrap;       
+                    .card-img {
+                        img {
+                            max-height: 385px;
+                            @include breakpoint-3 {
+                                max-height: 450px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

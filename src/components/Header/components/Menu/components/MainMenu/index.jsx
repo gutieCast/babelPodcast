@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavHashLink as NavLink } from 'react-router-hash-link'
+import { menu } from 'helpers/menuList'
 import 'components/Header/components/Menu/components/MainMenu/mainMenu.scss'
 
 const MainMenu = ({ styleName }) => {
@@ -12,21 +13,25 @@ const MainMenu = ({ styleName }) => {
     }
     return (
         <ul id="main-menu">
-            <li className="menu-item" onClick={(e) => handleClick(e)}>
-                <NavLink className={`${styleName} uk-animation-slide-top-small menu-link`} to="/">
-                    Inicio
-                </NavLink>
-            </li>
-            <li className="menu-item" onClick={(e) => handleClick(e)}>
-                <NavLink className={`${styleName} uk-animation-slide-top-small menu-link`} to="/podcasts">
-                    Pódcasts
-                </NavLink>
-            </li>
-            <li className="menu-item" onClick={(e) => handleClick(e)}>
-                <NavLink className={`${styleName} uk-animation-slide-top-small menu-link`} to="/contacto">
-                    Contacto
-                </NavLink>
-            </li>
+            {
+                menu.map(({ name, link, hash }) => {
+                    return (
+                        <li
+                            className="menu-item"
+                            key={name}
+                            onClick={(e) => handleClick(e)}
+                        >
+                            <NavLink className={`${styleName} uk-animation-slide-top-small menu-link`}
+                                to={`/${hash}`}
+                                scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
+                                to={link}
+                            >
+                                {name}
+                            </NavLink>
+                        </li>
+                    )
+                })
+            }
         </ul>
     )
 }
