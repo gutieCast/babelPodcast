@@ -1,8 +1,9 @@
 import React from 'react'
-import { BurguerButton, MainMenu } from './components/'
+import { BurguerButton } from 'components/Header/components/Menu/components/BurguerButton'
+import { MainMenu } from 'components/MainMenu'
 import 'components/Header/components/Menu/menu.scss'
 
-const Menu = ({ styleName }) => {
+const Menu = () => {
     return (
         <nav id="main-navegator">
             {

@@ -3,6 +3,7 @@
 
 #call-2021  {
     padding: 0px;
+    min-height: 600px;
     height: 100vh;
     .grid-row-3 {
         display: grid;
@@ -57,6 +58,31 @@
                         font-size: $main;
                     }
                 }
+            }
+            .PDF-downloader {
+                align-items: center;
+                background-color: transparent;
+                border: solid 1px $white;
+                border-radius: 5px;
+                color: $white;
+                font-family: $title-font;
+                font-size: $button;
+                font-weight: 700;
+                letter-spacing: 1.4;
+                text-transform: uppercase;
+                display: flex;
+                height: 55px;
+                padding: 7px;
+                justify-content: center;
+                min-width: 200px;
+                max-width: max-content;
+                cursor: pointer;
+                &:hover {
+                    color: $yellow;
+                    border: solid 1px $yellow;
+                    cursor: pointer;
+                    transition: all ease-in-out .5s;
+                }  
             }
         }
     }

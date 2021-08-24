@@ -1,33 +1,31 @@
 @import 'styles/mixins.scss';
 @import 'styles/variables.scss';
 
-#contact {
-    margin-top: 85px;
+#contacto {
     align-items: center;
     justify-content: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     width: 100%;
-    .section-title {
+    .subtitle {
         padding: 30px;
-        padding-top: 100px;
         font-size: $title-l;
         text-transform: uppercase;
         color: $yellow;
+        text-align: center;
     }
     .section-text {
-        color: $yellow;
-        font-family: $title-font;
+        color: $white;
+        font-family: $main-font;
         font-size: $r;    
         font-weight: bolder;
         margin: auto;
         text-shadow: rgba(3, 3, 3, 0.719) 0 0 5px;
         padding: 30px;
         a {
-            color: $white;
+            color: $yellow;
             &:hover {
-                color: violet;
+                text-decoration: underline;
             }
         }
     }

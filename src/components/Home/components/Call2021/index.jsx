@@ -1,13 +1,10 @@
 import React from 'react'
 import PatternDecoration from "assets/images/Patterns/patron3.png"
 import 'components/Home/components/Call2021/call2021.scss'
-import { Button } from 'components/Button'
 
 const Call2021 = () => {
     return (
-        <section id="call-2021"
-        // uk-parallax="opacity: 0, 1; y: 200, 199"
-        >
+        <section id="call-2021">
             <div className="grid-row-3">
                 <div className="pattern-decoration" style={{ backgroundImage: `url(${PatternDecoration})` }}></div>
 
@@ -28,11 +25,9 @@ const Call2021 = () => {
 
                         </p>
                     </div>
-                    <Button
-                        classStyle="uk-animation-shake"
-                        to="https://docs.google.com/forms/d/e/1FAIpQLSeYu3VNuuak1f3li6FdGcCkO_HE1r2HyAttHxj7q3jnvcZThA/viewform"
-                        text="¡Inscribirme!"
-                    />
+                    <a className="uk-animation-shake PDF-downloader" href="https://docs.google.com/forms/d/e/1FAIpQLSeYu3VNuuak1f3li6FdGcCkO_HE1r2HyAttHxj7q3jnvcZThA/viewform">
+                        ¡Inscribirme!
+                    </a>
                 </div>
                 <div className="pattern-decoration" style={{ backgroundImage: `url(${PatternDecoration})` }}></div>
             </div>

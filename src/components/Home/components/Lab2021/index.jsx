@@ -2,6 +2,8 @@ import { Layout } from 'components';
 import React from 'react'
 import Countdown from 'react-countdown';
 import { Cards } from 'components/Home/components/Lab2021/components/Cards';
+import Timeline from 'assets/images/cronograma_babel_lab2021.png';
+import { Button } from 'components/Button';
 import 'components/Home/components/Lab2021/lab2021.scss'
 
 const Lab2021 = () => {
@@ -60,7 +62,17 @@ const Lab2021 = () => {
                     </h3>
                     <Cards />
                 </div>
-
+                <div className="timeline">
+                    <img src={Timeline} alt="cronograma lab2021" />
+                    <div className="for-more-info">
+                        <p className="text">
+                            Para más info:
+                        </p>
+                        <Button classStyle={'PDF-downloader'}
+                            link={process.env.PUBLIC_URL + '/files/Babel_convocatoria_LAB2021.pdf'} text={'descargar pdf'}
+                        />
+                    </div>
+                </div>
             </Layout>
         </section>
     )

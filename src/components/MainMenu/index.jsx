@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavHashLink as NavLink } from 'react-router-hash-link'
 import { menu } from 'helpers/menuList'
-import 'components/Header/components/Menu/components/MainMenu/mainMenu.scss'
+import 'components/MainMenu/mainMenu.scss'
 
-const MainMenu = ({ styleName }) => {
+const MainMenu = ({ styleName, classLoc }) => {
     const body = document.querySelector('body');
     const handleClick = (e) => {
         e.preventDefault();
@@ -12,16 +12,17 @@ const MainMenu = ({ styleName }) => {
         }
     }
     return (
-        <ul id="main-menu">
+        <ul id="main-menu" className={classLoc}>
             {
                 menu.map(({ name, link, hash }) => {
                     return (
                         <li
-                            className="menu-item"
+                            className={`${styleName} menu-item`}
+                            tabIndex="0"
                             key={name}
                             onClick={(e) => handleClick(e)}
                         >
-                            <NavLink className={`${styleName} uk-animation-slide-top-small menu-link`}
+                            <NavLink className=" menu-link"
                                 to={`/${hash}`}
                                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}
                                 to={link}

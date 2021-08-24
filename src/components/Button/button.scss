@@ -34,22 +34,12 @@ button {
     min-width: 200px;
     max-width: max-content;
     cursor: pointer;
-    &.btn-dark {
-        &:hover {
-            background-color: transparent;
-            color: $white;
-            border: solid 1px $yellow;
-            cursor: pointer;
-            transition: all ease-in-out .5s;
-        }  
-    }
     &:hover {
+        color: $yellow;
         border: solid 1px $yellow;
-        background-color: $yellow;
-        color: $black;
-        text-decoration: none;
+        cursor: pointer;
         transition: all ease-in-out .5s;
-    }
+    }  
 }
 
 .btn {

@@ -4,16 +4,17 @@
 #main-menu {
     display: none;
     .menu-button-actived & {
-        background-color: black;
-        position: fixed;
-        z-index: 999999;
+        background-color: $black;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-        top: 0; right: 0; bottom: 0; left: 0;
-        padding: 100px 50px;
         height: 100vh;
-        overflow-y: scroll;
+        justify-content: center;
+        list-style: lower-greek;
+        overflow: hidden;
+        padding: 50px;
+        position: fixed;
+        top: 80px; right: 0; bottom: 0; left: 0;
+        z-index: 999999;
     }
     @include breakpoint-4 {
         margin: 0;
@@ -63,10 +64,10 @@
             margin: 0;
         }
         .menu-link  {
-            color: $yellow;
+            color: $white;
             display: inline-block;
             font-family: $title-font;
-            font-size: $title-m;
+            font-size: $main;
             font-weight: 500;
             line-height: normal;
             text-transform: uppercase;
@@ -81,7 +82,7 @@
                 font-size: $xs;
                 padding: 0 15px;
                 &:hover {
-                    color: $white;
+                    color: $yellow;
                     text-decoration-line: none;
                     transition: color ease-out .7s;
                 }

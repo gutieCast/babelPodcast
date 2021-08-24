@@ -1,0 +1,71 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+#footer-page {
+    background-color: $black;
+    // position: absolute;
+    // bottom: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 99;
+    .name-proyect {
+        color: $white;
+        font-family: $title-font;
+        font-size: $main;
+        letter-spacing: 11px;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+    }    
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 30px;
+        @include breakpoint-3 {
+            flex-direction: row;
+        }
+        .organization-container {
+            display: flex;
+            align-items: center;
+            @include breakpoint-3 {
+                width: 50%;
+                flex-direction: column;
+            }
+            p {
+                color: $yellow;
+                font-family: $title-font;
+                font-size: $xs;
+                @include breakpoint-3 {
+                    font-size: $main;
+                }
+            }
+            .logo-container {
+                width: 100px;
+                padding: 10px;
+                @include breakpoint-3 {
+                    padding: 30px;
+                    width: 200px;
+                }
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .menu-footer {
+        padding: 30px;
+    }
+    .signed {
+        color: $yellow;
+        font-family: $main-font;
+        font-size: $xxs;
+        @include breakpoint-3 {
+            font-size: $s;
+        }
+    }
+}

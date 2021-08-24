@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoBabel from 'assets/images/Logos/3a.png'
+import LogoBabel from 'assets/images/Logos/logo_babel_podcasts_bolivia.png'
 import 'components/Header/components/Logo/logo.scss'
 
 const Logo = () => {

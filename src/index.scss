@@ -11,9 +11,9 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
   #root {
-    display: flex;
-    flex-flow: column;
     position: relative;
     box-sizing: content-box;
     width: 100vw;
