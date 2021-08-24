@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import { Layout } from 'components';
 import React from 'react'
 import Countdown from 'react-countdown';
@@ -7,6 +8,11 @@ import { Button } from 'components/Button';
 import 'components/Home/components/Lab2021/lab2021.scss'
 
 const Lab2021 = () => {
+    const history = useHistory();
+
+    const handleClick = () => {
+        history.push('/files/Babel_convocatoria_LAB2021.pdf');
+    }
 
     const Completionist = () => <span>¡Empezamos!</span>;
 
@@ -69,6 +75,8 @@ const Lab2021 = () => {
                             Para más info:
                         </p>
                         <Button classStyle={'PDF-downloader'}
+                            text={"descargar pdf"}
+                            onClick={handleClick}
                             link={process.env.PUBLIC_URL + '/files/Babel_convocatoria_LAB2021.pdf'} text={'descargar pdf'}
                         />
                     </div>
