@@ -4,15 +4,10 @@ import React from 'react'
 import Countdown from 'react-countdown';
 import { Cards } from 'components/Home/components/Lab2021/components/Cards';
 import Timeline from 'assets/images/cronograma_babel_lab2021.png';
-import { Button } from 'components/Button';
+import { Link } from "react-router-dom";
 import 'components/Home/components/Lab2021/lab2021.scss'
 
 const Lab2021 = () => {
-    const history = useHistory();
-
-    const handleClick = () => {
-        history.push('/files/Babel_convocatoria_LAB2021.pdf');
-    }
 
     const Completionist = () => <span>¡Empezamos!</span>;
 
@@ -74,11 +69,12 @@ const Lab2021 = () => {
                         <p className="text">
                             Para más info:
                         </p>
-                        <Button classStyle={'PDF-downloader'}
-                            text={"descargar pdf"}
-                            onClick={handleClick}
-                            link={process.env.PUBLIC_URL + '/files/Babel_convocatoria_LAB2021.pdf'} text={'descargar pdf'}
-                        />
+                        <Link className="PDF-downloader"
+                            to={process.env.PUBLIC_URL + '/files/Babel_convocatoria_LAB2021.pdf'}
+                            target="_blank" download
+                        >
+                            descargar pdf
+                        </Link>
                     </div>
                 </div>
             </Layout>
