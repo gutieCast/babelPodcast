@@ -41,7 +41,7 @@
         height: 300px;
         @include breakpoint-3 {
             width: 50%;
-            height: 80vh;
+            height: 100vh;
         }
         #img-hero {
             background-size: contain;

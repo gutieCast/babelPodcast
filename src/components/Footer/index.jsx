@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="info-container">
                 <div className="organization-container">
                     <p>
-                        Una idea desarrollada por:
+                        Una idea desarrollada por
                     </p>
                     <div className="logo-container">
                         <img src={LogoColectivaImaginaria} alt="Logo colectiva imaginaria" />
@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 <div className="organization-container">
                     <p>
-                        Con el apoyo de:
+                        Con el apoyo de
                     </p>
                     <div className="logo-container">
                         <img src={LogoApthapi} alt="logo Fondo de Mujeres Bolivia Apthapi Jopueti" />
