@@ -18,27 +18,28 @@ const teachers = [
 const Cards = () => {
     return (
         <div
-            className="uk-position-relative uk-visible-toggle uk-light slider" tabIndex="-1"
             uk-slider="autoplay: true; autoplay-interval: 2500; pause-on-hover: true; center: true"
         >
-            <div className="uk-slider-container uk-slider-container-offset teachers-container">
-                <ul className="uk-slider-items uk-grid teachers-list">
-                    {
-                        teachers.map(({ name, img }) => {
-                            return (
-                                <li className="teacher-item" key={name}>
-                                    <div className="uk-card uk-card-default teacher-card">
-                                        <div className="uk-card-media-top card-img" >
-                                            <img src={img} alt={`${name} tallerista Babel 2021`} />
+            <div className="uk-position-relative uk-visible-toggle uk-light slider" tabIndex="-1">
+                <div className="uk-slider-container uk-slider-container-offset teachers-container">
+                    <ul className="uk-slider-items uk-grid teachers-list">
+                        {
+                            teachers.map(({ name, img }) => {
+                                return (
+                                    <li className="teacher-item" key={name}>
+                                        <div className="uk-card uk-card-default teacher-card">
+                                            <div className="uk-card-media-top card-img" >
+                                                <img src={img} alt={`${name} tallerista Babel 2021`} />
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            )
+                                    </li>
+                                )
 
-                        })
-                    }
+                            })
+                        }
 
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
     )

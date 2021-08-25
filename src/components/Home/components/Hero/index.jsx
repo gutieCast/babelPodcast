@@ -24,7 +24,7 @@ const Hero = () => {
                 className="uk-animation-slide-left uk-animation-fast uk-animation-reverse img-hero-container"
                 uk-parallax={
                     window.innerWidth < 768
-                        ? "target: #hero; y: 0,55vh; viewport: 0.5; easing: 0"
+                        ? "target: #hero; y: 0,35vh; viewport: 0.5; easing: 0"
                         : "target: #hero; opacity: 1, 0; x: 0,30vw; viewport: 0.5; easing: 0"
                 }
             >
