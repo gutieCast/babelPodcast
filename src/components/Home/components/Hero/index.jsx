@@ -4,7 +4,7 @@ import 'components/Home/components/Hero/hero.scss'
 
 const Hero = () => {
     return (
-        <div
+        <section
             id="hero"
         >
             <div
@@ -28,9 +28,9 @@ const Hero = () => {
                         : "target: #hero; opacity: 1, 0; x: 0,30vw; viewport: 0.5; easing: 0"
                 }
             >
-                <div id="img-hero" style={{ backgroundImage: `url(${HeroImg})` }}></div>
+                <img id="img-hero" src={HeroImg} alt="Babel podcast Bolivia. Periodismos populares y comunitarios" />
             </div >
-        </div >
+        </section >
     )
 }
 

@@ -18,6 +18,7 @@ const Contact = () => {
                 <p className="section-text">
                     ¿Te interesa ser parte de nuestra red, publicidad dentro de nuestros podcast, o buscas contar una historia nueva?
                     <br />
+                    <br />
                     <Link to="#"
                         onClick={(e) => {
                             window.location = "mailto:babelpodcast.com@gmail.com";
@@ -26,6 +27,7 @@ const Contact = () => {
                     >
                         ¡Escríbenos!
                     </Link>
+                    <br />
                     <br />
                     Nos encantará contactar contigo.
                 </p>
