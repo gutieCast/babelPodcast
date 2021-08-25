@@ -59,7 +59,7 @@ const Lab2021 = () => {
 
                 <div className="teachers-info">
                     <h3 className="title-section">
-                        ¡Estos son lxs talleristas que nos acompañaran!
+                        ¡Estxs son lxs talleristas que nos acompañaran!
                     </h3>
                     <Cards />
                 </div>
