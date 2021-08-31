@@ -17,19 +17,18 @@ const teachers = [
 
 const Cards = () => {
     return (
-        <div
-            uk-slider="autoplay: true; autoplay-interval: 2500; pause-on-hover: true; center: true"
-        >
-            <div className="uk-position-relative uk-visible-toggle uk-light slider" tabIndex="-1">
-                <div className="uk-slider-container uk-slider-container-offset teachers-container">
-                    <ul className="uk-slider-items uk-grid teachers-list">
+        <div uk-slider="autoplay: true; autoplay-interval: 2500; pause-on-hover: true; center: true" className="uk-position-relative uk-visible-toggle uk-light slider" tabIndex="-1" >
+            <div className="uk-position-relative position-slider" >
+                <div className="uk-slider-container uk-grid slider-container">
+                    <ul className="uk-slider-items uk-child-width-expand-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l teachers-list">
                         {
-                            teachers.map(({ name, img }) => {
+                            teachers.map((teacher, idx) => {
                                 return (
-                                    <li className="teacher-item" key={name}>
+                                    <li
+                                        uk-slider-item={`${idx}`} className="teacher-item" key={teacher.name}>
                                         <div className="uk-card uk-card-default teacher-card">
                                             <div className="uk-card-media-top card-img" >
-                                                <img src={img} alt={`${name} tallerista Babel 2021`} />
+                                                <img src={teacher.img} alt={`${teacher.name} tallerista Babel 2021`} />
                                             </div>
                                         </div>
                                     </li>
@@ -40,7 +39,14 @@ const Cards = () => {
 
                     </ul>
                 </div>
+                <a class="uk-position-center-left button-slider left" href="#" uk-slider-item="previous">
+                    <span uk-icon="icon: chevron-left; ratio: 2"></span>
+                </a>
+                <a class="uk-position-center-right button-slider right" href="#" uk-slider-item="next">
+                    <span uk-icon="icon: chevron-right; ratio: 2"></span>
+                </a>
             </div>
+            <ul class="uk-slider-nav"></ul>
         </div>
     )
 }

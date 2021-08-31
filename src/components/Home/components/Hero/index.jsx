@@ -4,11 +4,9 @@ import 'components/Home/components/Hero/hero.scss'
 
 const Hero = () => {
     return (
-        <section
-            id="hero"
-        >
+        <section id="hero">
             <div
-                className="uk-animation-slide-right uk-animation-fast uk-animation-reverse text-hero-container"
+                className="text-hero-container"
                 uk-parallax={
                     window.innerWidth < 768
                         ? "target: #hero; opacity: 1, 0; y: 0,-10vh; viewport: 0.5; easing: -1"
@@ -21,7 +19,7 @@ const Hero = () => {
                 <p className="text-hero upper">nuevas historias</p>
             </div >
             <div
-                className="uk-animation-slide-left uk-animation-fast uk-animation-reverse img-hero-container"
+                className="img-hero-container"
                 uk-parallax={
                     window.innerWidth < 768
                         ? "target: #hero; y: 0,35vh; viewport: 0.5; easing: 0"
