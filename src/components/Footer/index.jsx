@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <MainMenu styleName="uk-animation-slide-bottom-small" classLoc={"menu-footer"} />
             <p className="signed">
-                sitio web desarrolado por colectiva imaginaria</p>
+                sitio web desarrollado por colectiva imaginaria</p>
         </footer>
     )
 }
