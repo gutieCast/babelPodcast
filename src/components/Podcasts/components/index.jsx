@@ -1,0 +1,1 @@
+export { CardPodcast } from 'components/Podcast/components/CardPodcast'

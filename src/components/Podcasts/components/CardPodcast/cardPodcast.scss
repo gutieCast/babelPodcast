@@ -1,0 +1,14 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/variables.scss';
+
+.card-podcast {
+    padding: 0;
+    &:hover {
+        filter: contrast(87%);
+        box-shadow: 3px 3px 3px $yellow;
+        transform: translateY(-20px);
+        transition: all ease-in-out .4s;
+        z-index: 9999;
+        border-radius: 5px;
+    }
+}

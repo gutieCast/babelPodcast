@@ -1,10 +1,10 @@
 import { useHistory } from "react-router-dom";
 import { Layout } from 'components';
 import React from 'react'
-import Countdown from 'react-countdown';
-import { Cards } from 'components/Home/components/Lab2021/components/Cards';
-import Timeline from 'assets/images/cronograma_babel_lab2021.png';
-import { Link } from "react-router-dom";
+// import Countdown from 'react-countdown';
+import { SliderTeachersCards } from 'components/Home/components/Lab2021/components/SliderTeachersCards';
+// import Timeline from 'assets/images/cronograma_babel_lab2021.png';
+// import { Link } from "react-router-dom";
 import 'components/Home/components/Lab2021/lab2021.scss'
 
 const Lab2021 = () => {
@@ -47,9 +47,9 @@ const Lab2021 = () => {
                 pattern={true}
 
             >
-                <p className="text">
+                {/* <p className="text">
                     ¡Nuestro Laboratorio Podcast 2021 ya ha empezado!
-                </p>
+                </p> */}
                 {/* <Countdown
                     date="2021-08-31T19:00:00"
                     renderer={renderer}
@@ -59,11 +59,11 @@ const Lab2021 = () => {
 
                 <div className="teachers-info">
                     <h3 className="title-section">
-                        ¡Estxs son lxs talleristas que nos acompañaran!
+                        ¡Estxs son lxs talleristas que nos acompañaron!
                     </h3>
-                    <Cards />
+                    <SliderTeachersCards />
                 </div>
-                <div className="timeline">
+                {/* <div className="timeline">
                     <img src={Timeline} alt="cronograma lab2021" />
                     <div className="for-more-info">
                         <p className="text">
@@ -76,7 +76,7 @@ const Lab2021 = () => {
                             descargar pdf
                         </Link>
                     </div>
-                </div>
+                </div> */}
             </Layout>
         </section>
     )
