@@ -9,6 +9,22 @@
             z-index: 4;
             display: flex;
             flex-direction: column;
+            .subtitle-section {
+                color: $white;
+                position: relative;
+                z-index: 4;
+                padding: 10px;
+                display: block;
+                background-color: $black;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: $title-font;
+                font-weight: 400;
+                font-size: $main;
+                letter-spacing: 3px;
+                line-height: 1.2;
+                padding: 10px;
+            }
             .grid-timer {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);

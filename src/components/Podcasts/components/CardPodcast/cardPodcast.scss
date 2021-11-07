@@ -3,6 +3,8 @@
 
 .card-podcast {
     padding: 0;
+    margin: 0;
+    max-width: 300px;
     &:hover {
         filter: contrast(87%);
         box-shadow: 3px 3px 3px $yellow;

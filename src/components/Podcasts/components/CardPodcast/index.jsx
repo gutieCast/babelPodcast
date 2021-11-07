@@ -8,7 +8,7 @@ const CardPodcast = ({ img, name, by, description, links, seasons }) => {
 
     return (
         <>
-            <div className="uk-card uk-card-body uk-card-large card-podcast" onClick={() => setModalIsOpen(true)}>
+            <div className="uk-card uk-card-body card-podcast" onClick={() => setModalIsOpen(true)}>
                 <div className="uk-animation-toggle uk-card-media-top card-img" tabIndex="1">
                     <img src={img} alt={`${name} card`} />
                 </div>

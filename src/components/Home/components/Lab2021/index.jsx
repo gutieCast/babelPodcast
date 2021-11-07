@@ -58,7 +58,7 @@ const Lab2021 = () => {
                 /> */}
 
                 <div className="teachers-info">
-                    <h3 className="title-section">
+                    <h3 className="subtitle-section">
                         ¡Estxs son lxs talleristas que nos acompañaron!
                     </h3>
                     <SliderTeachersCards />
