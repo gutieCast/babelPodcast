@@ -1,1 +1,1 @@
-export { Cards } from 'components/Home/components/Lab2021/components/Cards'
+export { SliderTeachersCards } from './SliderTeachersCards'

@@ -1,1 +1,1 @@
-export { InscriptionForm } from 'components/Inscription/components/InscriptionForm'
+export { InscriptionForm } from './InscriptionForm'

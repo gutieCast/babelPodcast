@@ -1,9 +1,15 @@
-@import 'styles/mixins.scss';
-@import 'styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/variables.scss';
 
 .logo-container {
-    height: 70%;
-    #logoBabel {
-        max-height: 100%;
+    display: block;
+    margin: auto;
+    height: inherit;
+    .logo-link {
+        width: 30%;
+        display: block;
+        #logoBabel {
+            max-height: 100%;
+        }
     }
 }

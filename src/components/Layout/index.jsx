@@ -1,6 +1,6 @@
 import React from 'react'
-import Pattern from 'assets/images/Patterns/patron1.png'
-import 'components/Layout/layout.scss'
+import Pattern from '../../assets/images/Patterns/patron1.png'
+import './layout.scss'
 
 const Layout = ({ title, children, pattern }) => {
     return (

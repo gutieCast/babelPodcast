@@ -1,7 +1,7 @@
 import React from 'react'
 import { teachers } from './infoTeachers'
 import { TeacherCard } from './components/TeacherCard'
-import 'components/Home/components/Lab2021/components/SliderTeachersCards/cards.scss'
+import './sliderTeachersCards.scss'
 
 
 const SliderTeachersCards = () => {

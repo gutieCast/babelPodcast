@@ -1,8 +1,8 @@
 import React from 'react'
-import { Layout } from 'components/Layout';
-import { podcastsList } from 'components/Podcasts/podcastsList'
-import { CardPodcast } from 'components/Podcasts/components/CardPodcast';
-import 'components/Podcasts/podcast.scss'
+import { Layout } from '../Layout';
+import { podcastsList } from './podcastsList'
+import { CardPodcast } from './components/CardPodcast';
+import './podcast.scss'
 
 const Podcasts = () => {
     return (

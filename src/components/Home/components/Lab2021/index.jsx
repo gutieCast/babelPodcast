@@ -1,11 +1,10 @@
-import { useHistory } from "react-router-dom";
-import { Layout } from 'components';
 import React from 'react'
+// import { Link, useHistory } from "react-router-dom";
 // import Countdown from 'react-countdown';
-import { SliderTeachersCards } from 'components/Home/components/Lab2021/components/SliderTeachersCards';
-// import Timeline from 'assets/images/cronograma_babel_lab2021.png';
-// import { Link } from "react-router-dom";
-import 'components/Home/components/Lab2021/lab2021.scss'
+import { Layout } from '../../../Layout';
+import { SliderTeachersCards } from './components/SliderTeachersCards';
+// import Timeline from '../../../../assets/images/cronograma_babel_lab2021.png';
+import './lab2021.scss'
 
 const Lab2021 = () => {
 

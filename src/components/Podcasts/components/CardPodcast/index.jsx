@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Accordion } from 'uikit-react'
 import ReactModal from 'react-modal'
 import './cardPodcast.scss'
 
@@ -8,7 +7,7 @@ const CardPodcast = ({ img, name, by, description, links, seasons }) => {
 
     return (
         <>
-            <div className="uk-card uk-card-body card-podcast" onClick={() => setModalIsOpen(true)}>
+            <div className="uk-card card-podcast" onClick={() => setModalIsOpen(true)}>
                 <div className="uk-animation-toggle uk-card-media-top card-img" tabIndex="1">
                     <img src={img} alt={`${name} card`} />
                 </div>
@@ -69,12 +68,14 @@ const CardPodcast = ({ img, name, by, description, links, seasons }) => {
                                                 :
                                                 ''
                                         }
-                                        <Accordion>
+                                        <ul
+                                            className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical episodies-list" uk-accordion="multiple: true"
+                                        >
                                             {
                                                 season.episodes.map(episode => {
                                                     return (
                                                         <li key={episode.name}>
-                                                            <a class="uk-accordion-title episode-title" href="#">{`${episode.number}. ${episode.name}`}</a>
+                                                            <a class="uk-parent uk-accordion-title episode-title" href="#">{`${episode.number}. ${episode.name}`}</a>
                                                             <div className="uk-accordion-content">
                                                                 <iframe frameborder="0" height="200" scrolling="no" src={`${episode.src}`} width="100%"></iframe>
                                                             </div>
@@ -82,7 +83,7 @@ const CardPodcast = ({ img, name, by, description, links, seasons }) => {
                                                     )
                                                 })
                                             }
-                                        </Accordion>
+                                        </ul>
                                     </div>
                                 )
                             })

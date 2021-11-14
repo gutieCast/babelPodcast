@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Layout } from 'components/Layout'
+import { Layout } from '../Layout'
 // import { ContactForm } from './components/ContactForm'
-import 'components/Contact/contact.scss'
+import './contact.scss'
 
 const Contact = () => {
     return (

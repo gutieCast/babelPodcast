@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Home from 'components/Home'
-import { AboutUs } from 'components/AboutUs'
-import { Podcasts } from 'components/Podcasts'
-import { Contact } from 'components/Contact'
-import { Lab2021 } from 'components/Home/components/Lab2021'
-import 'components/Main/main.scss'
+import Home from '../Home'
+import { AboutUs } from '../AboutUs'
+import { Podcasts } from '../Podcasts'
+import { Contact } from '../Contact'
+import { Lab2021 } from '../Home/components/Lab2021'
+import './main.scss'
 
 const Main = () => {
     return (

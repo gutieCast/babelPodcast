@@ -1,1 +1,1 @@
-export { CardPodcast } from 'components/Podcast/components/CardPodcast'
+export { CardPodcast } from './CardPodcast'

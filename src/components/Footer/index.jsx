@@ -1,8 +1,8 @@
 import React from 'react';
-import LogoApthapi from 'assets/images/Logos/logo_fondo_mujeres_apthapi_bolivia.png';
-import 'components/Footer/footer.scss';
-import LogoColectivaImaginaria from 'assets/images/Logos/logo_colectiva_imaginaria_bolivia.png';
-import { MainMenu } from 'components/MainMenu';
+import { MainMenu } from '../MainMenu';
+import LogoApthapi from '../../assets/images/Logos/logo_fondo_mujeres_apthapi_bolivia.png';
+import LogoColectivaImaginaria from '../../assets/images/Logos/logo_colectiva_imaginaria_bolivia.png';
+import './footer.scss';
 
 const Footer = () => {
     return (

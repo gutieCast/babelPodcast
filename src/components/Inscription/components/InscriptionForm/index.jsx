@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Redirect } from 'react-router-dom'
-import { Button } from 'components/Button'
-import { validations } from 'helpers/validations'
 import PhoneInput from 'react-phone-number-input'
+import { Button } from '../../../Button'
+import { validations } from '../../../../helpers/validations'
 import 'react-phone-number-input/style.css'
-import 'components/Inscription/components/InscriptionForm/inscriptionForm.scss'
+import './inscriptionForm.scss'
 
 const InscriptionForm = () => {
 

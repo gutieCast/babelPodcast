@@ -1,7 +1,7 @@
 import React from 'react'
-import { BurguerButton } from 'components/Header/components/Menu/components/BurguerButton'
-import { MainMenu } from 'components/MainMenu'
-import 'components/Header/components/Menu/menu.scss'
+import { BurguerButton } from './components/BurguerButton'
+import { MainMenu } from '../../../MainMenu'
+import './menu.scss'
 
 const Menu = () => {
     return (

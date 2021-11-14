@@ -1,8 +1,8 @@
-import JG from 'assets/images/teachers/Jhoselin_Granados_Taller_Babel_2021_Guion_Podcast.png'
-import SR from 'assets/images/teachers/Shirley_Rios_Taller_Babel_2021_Medios_Digitales.png'
-import MN from 'assets/images/teachers/Michelle_Nogales_Taller_Babel_2021_Edicion_Audio.png'
-import RC from 'assets/images/teachers/Roberto_Condori_Carita_Taller_Babel_2021_Entrevista_Periodistica.png'
-import KG from 'assets/images/teachers/Karen_Gil_Taller_Babel_2021_Introduccion_Periodismo.png'
+import JG from '../../../../../../assets/images/teachers/Jhoselin_Granados_Taller_Babel_2021_Guion_Podcast.png'
+import SR from '../../../../../../assets/images/teachers/Shirley_Rios_Taller_Babel_2021_Medios_Digitales.png'
+import MN from '../../../../../../assets/images/teachers/Michelle_Nogales_Taller_Babel_2021_Edicion_Audio.png'
+import RC from '../../../../../../assets/images/teachers/Roberto_Condori_Carita_Taller_Babel_2021_Entrevista_Periodistica.png'
+import KG from '../../../../../../assets/images/teachers/Karen_Gil_Taller_Babel_2021_Introduccion_Periodismo.png'
 
 const infoTeachers = [
     {

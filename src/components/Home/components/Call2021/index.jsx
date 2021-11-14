@@ -1,6 +1,6 @@
 import React from 'react'
-import PatternDecoration from "assets/images/Patterns/patron3.png"
-import 'components/Home/components/Call2021/call2021.scss'
+import PatternDecoration from '../../../../assets/images/Patterns/patron3.png'
+import './call2021.scss'
 
 const Call2021 = () => {
     return (

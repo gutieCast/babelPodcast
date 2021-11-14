@@ -1,6 +1,6 @@
 import React from 'react'
-import HeroImg from 'assets/images/babel_podcasts_bolivia.png'
-import 'components/Home/components/Hero/hero.scss'
+import HeroImg from '../../../../assets/images/babel_podcasts_bolivia.png'
+import './hero.scss'
 
 const Hero = () => {
     return (

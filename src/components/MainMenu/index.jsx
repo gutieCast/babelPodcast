@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavHashLink as NavLink } from 'react-router-hash-link'
-import { menu } from 'helpers/menuList'
-import 'components/MainMenu/mainMenu.scss'
+import { menu } from '../../helpers/menuList'
+import './mainMenu.scss'
 
 const MainMenu = ({ styleName, classLoc }) => {
     const body = document.querySelector('body');

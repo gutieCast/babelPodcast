@@ -1,9 +1,9 @@
-import imgMW from 'assets/images/Podcast/muy-waso-podcast.jpg';
-import imgMMMB from 'assets/images/Podcast/mariquitas-movimiento-maricas-bolivia.jpg';
-import imgIP from 'assets/images/Podcast/imilla-podcast.jpg';
-import imgCSC from 'assets/images/Podcast/como-se-come-podcast.jpeg';
-import imgSAT from 'assets/images/Podcast/si-a-todo-podcast.jpg';
-import imgPP from 'assets/images/Podcast/peladas-podcast.jpg';
+import imgMW from '../../assets/images/Podcast/muy-waso-podcast.jpg';
+import imgMMMB from '../../assets/images/Podcast/mariquitas-movimiento-maricas-bolivia.jpg';
+import imgIP from '../../assets/images/Podcast/imilla-podcast.jpg';
+import imgCSC from '../../assets/images/Podcast/como-se-come-podcast.jpeg';
+import imgSAT from '../../assets/images/Podcast/si-a-todo-podcast.jpg';
+import imgPP from '../../assets/images/Podcast/peladas-podcast.jpg';
 
 
 const sources = [
