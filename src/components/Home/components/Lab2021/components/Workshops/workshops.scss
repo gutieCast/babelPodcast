@@ -25,12 +25,12 @@
         flex-direction: column;
         justify-content: center;
         position: relative;
+        height: auto;
         @include breakpoint-3 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 350px);
             grid-gap: 30px;
-            height: auto;
         }
         @include breakpoint-4 {
             grid-template-rows: repeat(3, 450px);
@@ -38,12 +38,16 @@
         .workshop-item {
             display: block;
             margin: auto;
-            width: fit-content;
-            height: fit-content;
-            &:last-child {
-                position: absolute;
-                left: 33%;
-                bottom: 0%;
+            height: 300px;
+            width: 300px;
+            @include breakpoint-3 {
+                width: fit-content;
+                height: fit-content;
+                &:last-child {
+                    position: absolute;
+                    left: 33%;
+                    bottom: 0%;
+                }
             }
         }
     }
