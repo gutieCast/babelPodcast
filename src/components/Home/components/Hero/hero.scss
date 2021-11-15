@@ -1,6 +1,14 @@
 @import '../../../../styles/mixins.scss';
 @import '../../../../styles/variables.scss';
 
+@keyframes orbit { 
+	100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+}
+@-webkit-keyframes orbit { 100% { -webkit-transform: rotate(360deg); } }
+@-moz-keyframes orbit { 
+	100% { -moz-transform: rotate(360deg); }
+}
+
 #hero {
     display: flex;
     flex-direction: column-reverse;
@@ -52,9 +60,34 @@
             width: 50%;
             height: 100vh;
         }
-        #img-hero {
-            width: 100%;
-            max-width: 415px;
+        #img-hero-animated {
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 250px;
+            width: 250px;
+            //animation
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            animation-name:orbit;
+            animation-duration:35s;
+            -moz-animation-iteration-count:infinite;
+            -moz-animation-timing-function:linear;
+            -moz-animation-name:orbit;
+            -moz-animation-duration:35s;
+            @include breakpoint-3 {
+                height: 400px;
+                width: 400px;
+            }
+        }
+        #img-hero-center {
+            background-size: contain;
+            height: 250;
+            width: 250px;
+            background-repeat: no-repeat;
+            @include breakpoint-3 {
+                height: 400px;
+                width: 400px;
+            }
         }
     }
 }

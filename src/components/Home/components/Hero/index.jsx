@@ -1,11 +1,13 @@
 import React from 'react'
-import HeroImg from '../../../../assets/images/babel_podcasts_bolivia.png'
+// import HeroImg from '../../../../assets/images/babel_podcasts_bolivia.png'
+import HeroImgCenter from '../../../../assets/images/babel_podcasts_bolivia-unmoving.png'
+import HeroImgAnim from '../../../../assets/images/babel_podcasts_bolivia-moving.png'
 import './hero.scss'
 
 const Hero = () => {
     return (
         <section id="hero">
-            <div
+            <article
                 className="text-hero-container"
                 uk-parallax={
                     window.innerWidth < 768
@@ -17,8 +19,8 @@ const Hero = () => {
                 <p className="text-hero upper">nuestras voces</p>
                 <p className="text-hero">para contar</p>
                 <p className="text-hero upper">nuevas historias</p>
-            </div >
-            <div
+            </article >
+            <article
                 className="img-hero-container"
                 uk-parallax={
                     window.innerWidth < 768
@@ -26,8 +28,10 @@ const Hero = () => {
                         : "target: #hero; opacity: 1, 0; x: 0,30vw; viewport: 0.5; easing: 0"
                 }
             >
-                <img id="img-hero" src={HeroImg} alt="Babel podcast Bolivia. Periodismos populares y comunitarios" />
-            </div >
+                <div id="img-hero-center" style={{ backgroundImage: `url(${HeroImgCenter})` }}>
+                    <div id="img-hero-animated" style={{ backgroundImage: `url(${HeroImgAnim})` }}></div>
+                </div>
+            </article >
         </section >
     )
 }

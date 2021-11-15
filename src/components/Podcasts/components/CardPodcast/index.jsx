@@ -21,7 +21,8 @@ const CardPodcast = ({ img, name, by, description, links, seasons }) => {
                 onRequestClose={() => setModalIsOpen(false)}
                 preventScroll={false}
             >
-                <article className="uk-container">
+                <article className="uk-container modal-body">
+                    <button uk-icon="icon: close; ratio: 2" className="uk-modal-close modal-close-btn" onClick={() => setModalIsOpen(false)}></button>
                     <header>
                         <h3 className="uk-card-title modal-title">{name}</h3>
                         <span className="modal-subtitle">{`por ${by}`}</span>
@@ -69,7 +70,7 @@ const CardPodcast = ({ img, name, by, description, links, seasons }) => {
                                                 ''
                                         }
                                         <ul
-                                            className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical episodies-list" uk-accordion="multiple: true"
+                                            className="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical episodies-list" uk-accordion="multiple: true"
                                         >
                                             {
                                                 season.episodes.map(episode => {
