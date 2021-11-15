@@ -1,0 +1,38 @@
+@import '../../../../../../../../styles/mixins.scss';
+@import '../../../../../../../../styles/variables.scss';
+
+.card-workshop {
+    padding: 0;
+    margin: 0;;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    display: block;
+    filter: opacity(85%);
+    &:hover {
+        box-shadow: 0 3px 3px $yellow;
+        filter: opacity(100%);
+        translate: 0 -10px;
+        transition: all ease-in-out .25s;
+    }
+    .card-workshop-img {
+        width: 250px;
+        height: 250px;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include breakpoint-3 {
+            width: 300px;
+            height: 300px;
+        }
+        @include breakpoint-4 {
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
+
+.label-video-workshop {
+    color: $ligth-gray;
+    text-transform: uppercase;
+}

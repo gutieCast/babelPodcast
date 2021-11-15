@@ -1,0 +1,47 @@
+@import '../../../../../../styles/mixins.scss';
+@import '../../../../../../styles/variables.scss';
+
+.workshops-container {
+    h3 {
+        color: $white;
+        position: relative;
+        z-index: 4;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $title-font;
+        font-weight: 500;
+        font-size: $s;
+        letter-spacing: 4px;
+        line-height: 1.2;
+        padding: 35px;
+    }
+    .workshops-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        @include breakpoint-3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 30px;
+            height: 1000px;
+        }
+        li {
+            display: block;
+            margin: auto;
+            @include breakpoint-3 {
+                #herramientas-difusion-digital {
+                    position: absolute;
+                    left: calc(50% - 200px);
+                    bottom: 0;
+                }
+            }
+        }
+        .workshop-item {
+            width: auto;
+        }
+    }
+}

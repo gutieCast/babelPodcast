@@ -3,7 +3,7 @@ import React from 'react'
 // import Countdown from 'react-countdown';
 import { Layout } from '../../../Layout';
 import { SliderTeachersCards } from './components/SliderTeachersCards';
-import { Videos } from './components/Videos';
+import { Workshops } from './components/Workshops';
 // import Timeline from '../../../../assets/images/cronograma_babel_lab2021.png';
 import './lab2021.scss'
 
@@ -56,10 +56,7 @@ const Lab2021 = () => {
                     zeroPadDays={1}
                     zeroPadTime={1}
                 /> */}
-                <div className="videos-container">
-                    <h3>Retoma el LAB 2021</h3>
-                    <Videos />
-                </div>
+                <Workshops />
 
                 <div className="teachers-info">
                     <h3 className="subtitle-section">
