@@ -2,6 +2,7 @@
 @import '../../../../../../styles/variables.scss';
 
 .workshops-container {
+    height: auto;
     h3 {
         color: $white;
         position: relative;
@@ -18,6 +19,8 @@
         padding: 35px;
     }
     .workshops-list {
+        margin-bottom: 50px;
+        padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -25,23 +28,16 @@
         @include breakpoint-3 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-auto-rows: repeat (3, auto);
             grid-gap: 30px;
-            height: 1000px;
+            height: auto;
         }
-        li {
-            display: block;
-            margin: auto;
-            @include breakpoint-3 {
-                #herramientas-difusion-digital {
-                    position: absolute;
-                    left: calc(50% - 200px);
-                    bottom: 0;
-                }
-            }
+        @include breakpoint-4 {
+            grid-auto-rows: 430px;
         }
         .workshop-item {
-            width: auto;
+            display: block;
+            margin: auto;
         }
     }
 }
