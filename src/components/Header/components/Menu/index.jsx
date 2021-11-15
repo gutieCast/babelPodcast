@@ -8,11 +8,12 @@ const Menu = () => {
         <nav id="main-navegator">
             {
                 window.inner > 999
-                    ? < MainMenu styleName={"uk-animation-slide-top-small"} />
-                    :
+                    ?
                     <BurguerButton>
                         <MainMenu styleName={"uk-animation-slide-top-small"} />
                     </BurguerButton>
+                    :
+                    < MainMenu styleName={"uk-animation-slide-top-small"} />
             }
         </nav>
     )

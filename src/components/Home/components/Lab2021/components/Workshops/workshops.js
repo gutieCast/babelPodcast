@@ -9,6 +9,7 @@ const workshopsList = [
         img: imgIAP,
         id: 'introducción-periodismo',
         name: 'Taller Introducción al periodismo',
+        teacher: 'Karen Gil',
         url1: 'https://www.youtube.com/embed/Og3So9oU_MU',
         url2: 'https://www.youtube.com/embed/MYr0T2bng8s'
     },

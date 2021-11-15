@@ -2,22 +2,20 @@
 @import '../../../../../../styles/variables.scss';
 
 .menu-button-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: relative; 
     #menu-button-toggle {
         display: block;
-        width: 30px;
-        height: 30px;
+        margin: auto;
+        width: inherit;
         position: absolute;
-        top: -4px;
-        transform: translate(0, -50%);
         transition: opacity 0.3s 0.3s;
         z-index: 9999999;
+        top: 0;
+        bottom: 0;
         span {
-            display: flex;
-            align-items: flex-end;
             width: 100%;
             height: 2.5px;
             position: absolute;

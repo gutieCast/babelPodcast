@@ -2,11 +2,11 @@
 @import '../../../../styles/variables.scss';
 
 .logo-container {
-    display: block;
-    margin: auto;
-    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     .logo-link {
-        width: 30%;
+        width: 75px;
         display: block;
         #logoBabel {
             max-height: 100%;
